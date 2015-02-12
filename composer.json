@@ -6,5 +6,8 @@
     "require": {
         "php": ">=5.3.0",
 	"smarty/smarty":"3.1.*"
+    },
+    "autoload": {
+        "psr-4":{"C\\":"src"}
     }
 }
