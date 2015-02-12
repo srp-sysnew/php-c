@@ -1,3 +1,5 @@
+<?php
+
 namespace C;
 
 class HelloWorld {
