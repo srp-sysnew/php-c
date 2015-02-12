@@ -1,0 +1,10 @@
+{
+    "name": "srp/php-c",
+    "type": "library",
+    "description": "A Test",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0",
+        "smarty/smarty": "3.1.*"
+    }
+}
