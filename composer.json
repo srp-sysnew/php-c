@@ -1,6 +1,5 @@
 {
     "name": "srp/php-c",
-    "type": "library",
     "description": "A Test",
     "license": "MIT",
     "require": {
