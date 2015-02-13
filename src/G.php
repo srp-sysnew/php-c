@@ -2,8 +2,8 @@
 namespace C;
 
 class G {
-	public static $HASH_SALT = '0129abcdefghijklmnop012345';
-	public static $CKEY_SALT = '0213abcdefghijklmnop012345';
+	public static $HASH_SALT = '9999abcdefghijklmnop0000';
+	public static $CKEY_SALT = '9999abcdefghijklmnop1111';
 	public static $DIR_BASE = '';
 	public static $DIR_CACHE = '';
 	public static $URL_LOGIN = '/';
