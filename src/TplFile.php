@@ -10,13 +10,16 @@ class TplFile {
      */
 	public static function path() {
 
-    	$basename = basename($_SERVER['SCRIPT_NAME'], '.php');
+	// マルチバイト不許可
+	$script_name = mb_convert_encoding($_SERVER['SCRIPT_NAME'], 'ascii', 'auto');
+	
+    	$basename = basename($script_name, '.php');
 
     	if ($basename == '') {
     		$basename = 'index';
     	}
 
-        $path = dirname($_SERVER['SCRIPT_NAME']) . '/' . $basename . '.tpl';
+        $path = dirname($script_name) . '/' . $basename . '.tpl';
         $path = preg_replace('/^\/+/', '', $path);
 
         return $path;
@@ -30,12 +33,15 @@ class TplFile {
      */
     public static function view() {
 
-    	if (isset($_GET['tpl']) && preg_match('/^[A-Za-z0-9_]+$/', $_GET['tpl'])) {
+    	// マルチバイト不許可
+	$script_name = mb_convert_encoding($_SERVER['SCRIPT_NAME'], 'ascii', 'auto');
+	
+	if (isset($_GET['tpl']) && preg_match('/^[A-Za-z0-9_]+$/', $_GET['tpl'])) {
             $basename = $_GET['tpl'];
         } else {
 	    $basename = 'index';
         }
-        $path = dirname($_SERVER['SCRIPT_NAME']) . '/' . $basename . '.tpl';
+        $path = dirname($script_name) . '/' . $basename . '.tpl';
         $path = preg_replace('/^\/+/', '', $path);
 
         return $path;
