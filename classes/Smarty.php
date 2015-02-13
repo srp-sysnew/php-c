@@ -24,7 +24,7 @@ class Smarty extends \Smarty {
     
     $this->default_modifiers = array('default:""');    
     
-    $security = new \Smarty_Security($smarty);
+    $security = new \Smarty_Security($this);
     // $security->php_functions[] = 'timelimit';
     // $security->php_functions[] = 'isempty';
     // $security->php_modifiers[] = 'sizeof';
